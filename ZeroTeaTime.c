@@ -11,7 +11,7 @@ int price[10] = {59, 49, 99, 79, 89, 59, 99, 59, 79};
 int orders[99];
 
 int main() {
-    printf("--- FAnime Restuarant ---\n\n");
+    printf("--- Zero's Tea Time ---\n\n");
     delay(500);
     printf("Welcome to our restuarant!\n");
     delay(500);
