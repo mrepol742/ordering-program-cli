@@ -44,14 +44,20 @@ void receipt() {
 }
 
 void input() {
-    // update do while loop
-    scanf("%d", &orders[0]);
-    printf("Anything else? ");
-    // if 0 reciept
-    if (orders[length(&orders[0]- 1)] == 0) {
-       receipt();
-    } else {
-       input();
+    int i;
+    while (2 < 3) {
+        int or;
+        scanf("%d", &or);
+        orders[i] = or;
+        printf("Anything else? ");
+        // if 0 reciept
+        if (or == 0) {
+            receipt();
+            break;
+        } else {
+            i++;
+            printf("%s", food + orders[i]);
+        }
     }
 }
 
