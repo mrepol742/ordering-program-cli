@@ -56,7 +56,7 @@ void input() {
             break;
         } else {
             i++;
-            printf("%s", food + orders[i]);
+            printf("%s", *(food) + orders[i]);
         }
     }
 }
@@ -65,7 +65,7 @@ void menu() {
     int i;
     for (i = 0; i < 9; i++) {
         // TODO: warning format %s expects the argument of type char *
-        printf("%d. %s - %dP\n", i + 1, food + i, price[i]);
+        printf("%d. %s - %dP\n", i + 1, *(food) + i, price[i]);
         delay(250);
     }
     printf("Enter '0' to finished the order.\n");

@@ -17,10 +17,10 @@ int main() {
     int i;
     for (i = 0; i < 10; i++) {
         if (i == (firstOrder-1)) {
-            printf("\n%d₱ %s", prices[i], order + i);
+            printf("\n%d₱ %s", prices[i], *(order) + i);
         }
         if (i == (secondOrder-1)) {
-            printf("\n%d₱ %s", prices[i], order + i);
+            printf("\n%d₱ %s", prices[i], *(order) + i);
         }
     }
     printf("\n________\n%d Total Amount\n", sum);
