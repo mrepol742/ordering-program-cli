@@ -14,13 +14,15 @@ int main() {
     scanf("%d", &secondOrder);
     int sum = prices[firstOrder-1] + prices[secondOrder-1];
     printf("\nYour receipt:");
-    int i;
+    int i, j;
     for (i = 0; i < 10; i++) {
         if (i == (firstOrder-1)) {
-            printf("\n%d₱ %s", prices[i], *(order) + i);
+            printf("\n%d₱ %s", prices[i], order[i]);
         }
-        if (i == (secondOrder-1)) {
-            printf("\n%d₱ %s", prices[i], *(order) + i);
+    }
+    for (j = 0; j < 10; j++) {
+        if (j == (secondOrder-1)) {
+            printf("\n%d₱ %s", prices[j], order[j]);
         }
     }
     printf("\n________\n%d Total Amount\n", sum);
