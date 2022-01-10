@@ -49,14 +49,15 @@ void input() {
         int or;
         scanf("%d", &or);
         orders[i] = or;
-        printf("Anything else? ");
+        printf("Append: %d", orders[i]);
+        printf("Wanna add more? ");
         // if 0 reciept
         if (or == 0) {
             receipt();
             break;
         } else {
             i++;
-            printf("%s", food[ orders[i]]);
+            printf("food is %s orders is %d", food[orders[i]], orders[i]);
         }
     }
 }
@@ -65,8 +66,9 @@ void menu() {
     int i;
     for (i = 0; i < 9; i++) {
         // TODO: warning format %s expects the argument of type char *
+        // linux: suddenly the warning gone like it doesnt exists
         printf("%d. %s - %dP\n", i + 1, food[i], price[i]);
-        delay(250);
+        delay(200);
     }
     printf("Enter '0' to finished the order.\n");
 }
