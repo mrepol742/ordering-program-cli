@@ -7,7 +7,6 @@
 #include <stdio.h>
 #include <time.h>
 
-int sum(int *orders, int length);
 void delay(int ms);
 void menu();
 void input();
@@ -50,24 +49,6 @@ void receipt() {
        // printf("\ncurrent price added is %d", price[orders[i]]);
     } 
     printf("\n\nThe total amount is: %d\n", sum);
-}
-
-int concat(int x, int y) {
-    int temp = y;
-    while (y != 0) {
-        x *= 10;
-        y /= 10;
-    }
-    return x + temp;
-}
-
-int sum(int *count, int length) {
-   int total = 0;
-   int i;
-   for (i = 0; i < length; i++) {
-        total += count[i];
-   }
-   return (total);
 }
 
 void input() {
