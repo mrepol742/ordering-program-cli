@@ -43,12 +43,14 @@ int length(int *p) {
 
 void receipt() {
     int i, sum = 0;
-    for (i = 0; i < length(orders); i++) {
+    printf("\n\n#############");
+    printf("\n\tRECEIPT");
+    for (i = 0; i < length(orders)-1; i++) {
         sum += price[orders[i]];
-        // debug
-       // printf("\ncurrent price added is %d", price[orders[i]]);
+        printf("\n\t\t%s %d", food[i+1], price[orders[i]]);
     } 
-    printf("\n\nThe total amount is: %d\n", sum);
+    printf("\n\n\t\tThe total amount is: %d\n", sum);
+    printf("#############\n");
 }
 
 void input() {
