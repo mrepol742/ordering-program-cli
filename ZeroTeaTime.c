@@ -66,7 +66,6 @@ void input() {
         // debug
        // printf("Append: %d", orders[i]);
         printf("Wanna add more? ");
-        // if 0 reciept
         if (or == 0) {
             receipt();
             break;
@@ -80,8 +79,6 @@ void input() {
 void menu() {
     int i;
     for (i = 0; i < 9; i++) {
-        // TODO: warning format %s expects the argument of type char *
-        // linux: suddenly the warning gone like it doesnt exists
         printf("%d. %s - %dP\n", i + 1, food[i], price[i]);
         delay(200);
     }
