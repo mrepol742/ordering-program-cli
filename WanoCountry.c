@@ -1,7 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    printf("[Welcome to Wano Country Restaurant]\n\n");
+printf(" m    m               #               mmm                                    \n");
+printf(" ##  ##  mmm    m mm  #   m         m'  '  mmm    mmmm  m   m   mmm   m mm  \n");
+printf(" # ## # '   #   #'  ' # m'          #   mm '   #  #' '#  #   #  '   #  #'  # \n");
+printf(" # '' # m'''#   #     #'#           #    # m'''#  #   #  #   #  m'''#  #   # \n");
+printf(" #    # 'mm'#   #     #  'm          'mmm' 'mm'#  '#m'#  'mm'#  'mm'#  #   # \n");
+printf("                                                   m  #                      \n");
+printf("                                                    ''                       \n");
+
+    printf("\n\n[Welcome to Wano Country Restaurant]\n\n");
     printf("Menu:\n");
     char order[][20] = {"Boiled Chicken", "Sashimi", "Takoyaki", "Mochi", "Onigiri", "Ramen", "Samba Beefs", "Bento", "Oden", "Chopper"};
     printf("1. 59₱ Boiled Chicken  2. 89₱ Sashimi\n3. 99₱ Takoyaki        4. 59₱ Mochi\n5. 79₱ Onigiri         6. 99₱ Ramen\n7. 99₱ Samba Beefs     8. 79₱ Bento\n9. 59₱ Oden            10. 99₱ Chopper\n\n");
@@ -26,6 +34,5 @@ int main() {
         }
     }
     printf("\n________\n%d Total Amount\n", sum);
-    
     return 0;
 }
