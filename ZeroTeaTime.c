@@ -15,11 +15,17 @@ void receipt();
 char food[][20] = {"Lemon Pie", "Iced Coffee", "Pork Cutlet Bowl", "Takiyaki", "Yaki Dango", "Ramen", "Onigiri", "Curry", "Pocky"};
 int price[10] = {59, 49, 99, 79, 89, 59, 99, 59, 79};
 int orders[99];
+char asd[] = "#############";
 
 int main() {
-    printf("--- Zero's Tea Time ---\n\n");
+    delay(100);
+    printf("%s\n\n", asd);
+    delay(100);
+    printf("\t--- Zero's Tea Time ---");
+    delay(150);
+    printf("\n\n%s", asd);
     delay(500);
-    printf("Welcome to our restuarant!\n");
+    printf("\n\nWelcome to our restuarant!\n");
     delay(500);
     printf("Here's our menu:\n");
     delay(500);
@@ -45,6 +51,7 @@ void receipt() {
     delay(200);
     int i, sum = 0;
     printf("\n\n#############");
+    delay(150);
     printf("\n\tRECEIPT");
     for (i = 0; i < length(orders)-1; i++) {
         sum += price[orders[i]];
@@ -58,18 +65,19 @@ void receipt() {
 
 void input() {
     int i;
-    while (2 < 3) {
+    while (1) {
         i++;
         int or;
         scanf("%d", &or);
         orders[i -1 ] = or -1;
         // debug
        // printf("Append: %d", orders[i]);
-        printf("Wanna add more? ");
+       delay(100);
         if (or == 0) {
             receipt();
             break;
         } else {
+            printf("Wanna add more? ");
             // debug
           //  printf("\nfood is %s orders is %d", food[orders[i -1]], orders[i-1]);
         }

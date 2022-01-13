@@ -14,12 +14,41 @@ printf("                                                    ''                  
     char order[][20] = {"Boiled Chicken", "Sashimi", "Takoyaki", "Mochi", "Onigiri", "Ramen", "Samba Beefs", "Bento", "Oden", "Chopper"};
     printf("1. 59₱ Boiled Chicken  2. 89₱ Sashimi\n3. 99₱ Takoyaki        4. 59₱ Mochi\n5. 79₱ Onigiri         6. 99₱ Ramen\n7. 99₱ Samba Beefs     8. 79₱ Bento\n9. 59₱ Oden            10. 99₱ Chopper\n\n");
     int prices[] = {59, 89, 99, 59, 79, 99, 99, 79, 59, 99};
-    printf("\n\nEnter your order: ");
-    int firstOrder;
-    scanf("%d", &firstOrder);
-    printf("Enter your second order: ");
-    int secondOrder;
-    scanf("%d", &secondOrder);
+    int orders[256];
+    int sum =0;
+
+    int count;
+    while (1) {
+        int temp;
+        printf("Enter your order: ");
+        scanf("%d", &temp);
+        if (count > 0 && temp == 99) {
+
+           // printf("%d", count);
+
+            int orderC;
+           printf("\n\n***** your receipt *****\n");
+            while (1) {
+                orderC++;
+                sum+=prices[orders[orderC-1]];
+                printf("%s -- %d\n", order[orderC], prices[orders[orderC-1]]);
+            
+                if (orderC == count) { 
+
+printf("Total amount due is: %d Pesos\n", sum);
+printf("****** thank you ******\n");
+                    break;
+                }
+            }
+
+            break;
+        } else {
+            count++;
+            orders[count - 1] = temp -1;
+        }
+        printf("Enter 99 to close and print the receipt-- ");
+    }
+ /*
     int sum = prices[firstOrder-1] + prices[secondOrder-1];
     printf("\nYour receipt:");
     int i, j;
@@ -34,5 +63,6 @@ printf("                                                    ''                  
         }
     }
     printf("\n________\n%d Total Amount\n", sum);
+    */
     return 0;
 }
