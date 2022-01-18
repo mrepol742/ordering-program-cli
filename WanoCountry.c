@@ -31,7 +31,7 @@ printf("                                                    ''                  
             while (1) {
                 orderC++;
                 sum+=prices[orders[orderC-1]];
-                printf("%s -- %d\n", order[orderC], prices[orders[orderC-1]]);
+                printf("%s -- %d\n", order[orders[orderC-1]], prices[orders[orderC-1]]);
             
                 if (orderC == count) { 
 

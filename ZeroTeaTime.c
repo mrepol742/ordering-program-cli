@@ -53,9 +53,9 @@ void receipt() {
     printf("\n\n#############");
     delay(150);
     printf("\n\tRECEIPT");
-    for (i = 0; i < length(orders)-1; i++) {
+    for (i = 1; i < length(orders)-1; i++) {
         sum += price[orders[i]];
-        printf("\n\t\t%s %d", food[i+1], price[orders[i]]);
+        printf("\n\t\t%s %d", food[orders[i]], price[orders[i]]);
         delay(250);
     } 
     delay(500);
@@ -71,7 +71,7 @@ void input() {
         scanf("%d", &or);
         orders[i -1 ] = or -1;
         // debug
-       // printf("Append: %d", orders[i]);
+      //  printf("Append: %d", orders[i]);
        delay(100);
         if (or == 0) {
             receipt();
