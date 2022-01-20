@@ -1,9 +1,3 @@
-/*
-*
-* Copyright (c) 2022 Melvin Jones Repol (mrepol742.github.io). All rights reserved.
-*
-*/
-
 #include <stdio.h>
 #include <time.h>
 
@@ -60,6 +54,7 @@ void receipt() {
     } 
     delay(500);
     printf("\n\n\t\tThe total amount is: %d\n", sum);
+    delay(500);
     printf("#############\n");
 }
 

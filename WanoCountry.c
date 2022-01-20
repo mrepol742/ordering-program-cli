@@ -2,7 +2,7 @@
 
 int main() {
 printf(" m    m               #               mmm                                    \n");
-printf(" ##  ##  mmm    m mm  #   m         m'  '  mmm    mmmm  m   m   mmm   m mm  \n");
+printf(" ##  ##  mmm    m mm  #   m         m'  '  mmm    mmmm  m   m   mmm   m mm   \n");
 printf(" # ## # '   #   #'  ' # m'          #   mm '   #  #' '#  #   #  '   #  #'  # \n");
 printf(" # '' # m'''#   #     #'#           #    # m'''#  #   #  #   #  m'''#  #   # \n");
 printf(" #    # 'mm'#   #     #  'm          'mmm' 'mm'#  '#m'#  'mm'#  'mm'#  #   # \n");
@@ -31,7 +31,7 @@ printf("                                                    ''                  
             while (1) {
                 orderC++;
                 sum+=prices[orders[orderC-1]];
-                printf("%s -- %d\n", order[orders[orderC-1]], prices[orders[orderC-1]]);
+                printf("%s -- %d Pesos\n", order[orders[orderC-1]], prices[orders[orderC-1]]);
             
                 if (orderC == count) { 
 
@@ -48,21 +48,5 @@ printf("****** thank you ******\n");
         }
         printf("Enter 99 to close and print the receipt-- ");
     }
- /*
-    int sum = prices[firstOrder-1] + prices[secondOrder-1];
-    printf("\nYour receipt:");
-    int i, j;
-    for (i = 0; i < 10; i++) {
-        if (i == (firstOrder-1)) {
-            printf("\n%d₱ %s", prices[i], order[i]);
-        }
-    }
-    for (j = 0; j < 10; j++) {
-        if (j == (secondOrder-1)) {
-            printf("\n%d₱ %s", prices[j], order[j]);
-        }
-    }
-    printf("\n________\n%d Total Amount\n", sum);
-    */
     return 0;
 }
