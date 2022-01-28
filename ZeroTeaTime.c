@@ -1,3 +1,5 @@
+// demo at https://mrepol742.github.io/Mini-Restuarant-System/ZeroTeaTime.mp4
+
 #include <stdio.h>
 #include <time.h>
 
