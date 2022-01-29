@@ -27,7 +27,7 @@ printf("                                                    ''                  
            // printf("%d", count);
 
             int orderC;
-           printf("\n\n***** your receipt *****\n");
+           printf("\n\n***** your receipt *****\n\n");
             while (1) {
                 orderC++;
                 sum+=prices[orders[orderC-1]];
@@ -35,8 +35,27 @@ printf("                                                    ''                  
             
                 if (orderC == count) { 
 
-printf("Total amount due is: %d Pesos\n", sum);
-printf("****** thank you ******\n");
+
+                    printf("\nTotal amount due is: %d Pesos\n", sum);
+                    int cash;
+                    printf("::::::::::\n");
+                    printf("Enter Cash: ");
+                    scanf("%d", &cash);
+                   if (cash < sum) {
+                       printf("You have %d Pesos balance.\n", sum - cash);
+                   } else {
+                       printf("Change is: %d Pesos\n", cash - sum);
+                   }
+                    printf("::::::::::\n");
+                   printf("\n\n****** thank you ******\n\n\n");
+
+printf(" m    m               #               mmm                                    \n");
+printf(" ##  ##  mmm    m mm  #   m         m'  '  mmm    mmmm  m   m   mmm   m mm   \n");
+printf(" # ## # '   #   #'  ' # m'          #   mm '   #  #' '#  #   #  '   #  #'  # \n");
+printf(" # '' # m'''#   #     #'#           #    # m'''#  #   #  #   #  m'''#  #   # \n");
+printf(" #    # 'mm'#   #     #  'm          'mmm' 'mm'#  '#m'#  'mm'#  'mm'#  #   # \n");
+printf("                                                   m  #                      \n");
+printf("                                                    ''                       \n"); 
                     break;
                 }
             }
@@ -46,7 +65,7 @@ printf("****** thank you ******\n");
             count++;
             orders[count - 1] = temp -1;
         }
-        printf("Enter 99 to close and print the receipt-- ");
+        printf("[Enter 99 to close and print the receipt] ");
     }
     return 0;
 }
