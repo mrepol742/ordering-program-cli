@@ -1,4 +1,22 @@
-// demo at https://mrepol742.github.io/Mini-Restuarant-System/ZeroTeaTime.mp4
+/*
+*
+* Copyright (c) 2022 Melvin Jones Repol (mrepol742.github.io). All rights reserved.
+*
+* License under the GNU General Public License, Version 3.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     https://www.gnu.org/licenses/gpl-3.0.en.html
+*
+* Unless required by the applicable law or agreed in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+// Video demo at https://mrepol742.github.io/Mini-Restuarant-System/ZeroTeaTime.mp4
+// Live demo at https://onlinegdb.com/ZWLo37958
 
 #include <stdio.h>
 #include <time.h>
@@ -51,13 +69,30 @@ void receipt() {
     printf("\n\tRECEIPT");
     for (i = 1; i < length(orders)-1; i++) {
         sum += price[orders[i]];
-        printf("\n\t\t%s %d", food[orders[i]], price[orders[i]]);
+        printf("\n\t\t%s %dP", food[orders[i]], price[orders[i]]);
         delay(250);
     } 
     delay(500);
-    printf("\n\n\t\tThe total amount is: %d\n", sum);
+    printf("\n\n\t\tThe total amount is: %dP\n", sum);
+    delay(500);
+    printf("\n\t\t----");
+    delay(500);
+    printf("\n\t\tEnter Payment: ");
+    int pay;
+    scanf("%d", &pay);
+    delay(500);
+    printf("\t\t----");
+    delay(500);
+    if (pay >= sum) {
+        int change = pay - sum;
+        printf("\n\n\t\tChange:  %dP\n", change);
+    } else {
+        int bal = sum - pay;
+        printf("\n\n\t\tBalance: %dP\n", bal);
+    }
     delay(500);
     printf("#############\n");
+    printf("\n\n\n\t\t ===== THANK YOU FOR PURCHASING =====\n\n\n\n");
 }
 
 void input() {
@@ -74,9 +109,8 @@ void input() {
             receipt();
             break;
         } else {
-            printf("Wanna add more? ");
-            // debug
-          //  printf("\nfood is %s orders is %d", food[orders[i -1]], orders[i-1]);
+            printf("  Added %s to the list.", food[orders[i -1]]);
+            printf("\n\nWanna add more? ");
         }
     }
 }
