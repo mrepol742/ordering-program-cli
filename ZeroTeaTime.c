@@ -67,7 +67,7 @@ void receipt() {
     printf("\n\n#############");
     delay(150);
     printf("\n\tRECEIPT");
-    for (i = 1; i < length(orders)-1; i++) {
+    for (i = 0; i < length(orders)-1; i++) {
         sum += price[orders[i]];
         printf("\n\t\t%s %dP", food[orders[i]], price[orders[i]]);
         delay(250);
